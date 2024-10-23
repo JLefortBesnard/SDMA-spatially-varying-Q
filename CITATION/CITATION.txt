@@ -1,0 +1,5 @@
+@article{LefortBesnard2024SDMA_varying_Q,
+  title={SDMA for spatially varying Q},
+  author={Lefort-Besnard, Jeremy and Nichols, Thomas E and Maumet, Camille},
+  year={2024}
+}
