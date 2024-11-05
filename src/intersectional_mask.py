@@ -8,7 +8,8 @@ import nibabel
 ##################
 # gather NARPS team results that will be used to compute a mask
 ##################
-data_path = os.path.join("data", "NARPS")
+
+data_path = os.path.join("data", "NARPS", "data_NARPS_for_SDMA", "neurovault_narps_open_pipeline", "orig")
 results_dir = os.path.join("results", "NARPS")
 subjects = []
 for path_to_sub in glob.glob(os.path.join(data_path, '*', "hypo1_unthresh.nii.gz")):

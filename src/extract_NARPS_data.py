@@ -9,7 +9,7 @@ def resample_NARPS_unthreshold_maps(data_path, hyp, subjects_removed_list, mask)
     print("Extracting data from hypothesis ", hyp)
     # extract subject list
     subjects_list = []
-    for path_to_sub in glob.glob(opj(data_path, "*/hypo{}_unthresh.nii.gz".format(hyp))):
+    for path_to_sub in glob.glob(opj(data_path, "*", "hypo{}_unthresh.nii.gz".format(hyp))):
         subjects_list.append(path_to_sub.split('/')[-2])
     # Resample unthreshold maps for a given hypothesis + mask
     resampled_maps = {}
@@ -45,8 +45,7 @@ def resample_NARPS_unthreshold_maps(data_path, hyp, subjects_removed_list, mask)
 participants_mask_path = os.path.join("results" , "NARPS", "masking", "participants_mask.nii")
 participant_mask = nibabel.load(participants_mask_path)
 
-# data_path = '/home/jlefortb/neurovault_narps_open_pipeline/orig/'
-data_path = os.path.join("data", "NARPS")
+data_path = os.path.join("data", "NARPS", "data_NARPS_for_SDMA", "neurovault_narps_open_pipeline", "orig")
 # path to save resampled NARPS data
 output_path = os.path.join("data", "NARPS")
 
